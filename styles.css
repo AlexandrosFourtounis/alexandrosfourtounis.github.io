@@ -11,3 +11,21 @@ body {
 .profile-image:hover {
     transform: scale(1.01);
 }
+
+.ransomwarden_logo, .petcare_logo, .evol_logo{
+    border: solid black 1px
+
+}
+.social-icons a {
+    margin: 0 10px;
+    color: #333;
+    /* Change the color as needed */
+    font-size: 2em;
+    /* Change the size as needed */
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    /* Change the hover color as needed */
+}
