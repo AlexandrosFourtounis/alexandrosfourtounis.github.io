@@ -1,123 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexandros Fourtounis - Computer Science Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexandros Fourtounis</title>
+  <meta name="description" content="Alexandros Fourtounis is an M.Sc. student at the University of Crete and an R&amp;D computer scientist at ICS-FORTH, researching DNS security, web security and privacy.">
+  <meta name="author" content="Alexandros Fourtounis">
+  <link rel="canonical" href="https://alexandrosfourtounis.github.io/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Alexandros Fourtounis">
+  <meta property="og:description" content="Security researcher at ICS-FORTH working on DNS security, web measurement and privacy.">
+  <meta property="og:url" content="https://alexandrosfourtounis.github.io/">
+  <meta property="og:image" content="https://alexandrosfourtounis.github.io/images/alexandros-fourtounis.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F3F5F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121821" media="(prefers-color-scheme: dark)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Alexandros Fourtounis</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <a class="skip-link" href="#research">Skip to content</a>
 
-    <header id="hero" class="py-5 text-center text-white">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-3" data-aos="fade-down" data-aos-delay="100">Alexandros Fourtounis</h1>
-            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Computer Science Student & Technology Enthusiast</p>
-            <a href="#about" class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-delay="300">Learn More</a>
+  <div class="frame">
+    <header class="hero">
+      <div class="hero-intro">
+        <img class="portrait" src="images/alexandros-fourtounis.jpg" alt="Portrait of Alexandros Fourtounis" width="480" height="600">
+        <h1>Alexandros Fourtounis</h1>
+        <p class="hero-lede">I'm an M.Sc. student at the University of Crete and an R&amp;D computer scientist at ICS-FORTH. I research DNS and web security, focusing on how malicious domains are registered in bulk, how tracking pixels collect personal data and how abuse gets past advertising platforms.</p>
+        <ul class="hero-links">
+          <li><a href="Alexandros_Fourtounis_CV.pdf">CV (PDF)</a></li>
+          <li><a href="https://github.com/AlexandrosFourtounis">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/alexandros-fourtounis">LinkedIn</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <figure class="feed" id="feed">
+        <div class="feed-panel">
+          <div class="feed-stage">
+            <p class="feed-head"><strong>Newly registered domains</strong></p>
+            <ul class="stream" aria-label="Newly registered domains">
+              <li>mountainherb-goods.com</li>
+              <li class="m" data-m="0">parcelhold-notice-4821.top</li>
+              <li>lindos-sailing-trips.gr</li>
+              <li>openfield-studio.net</li>
+              <li>kestrel-analytics.io</li>
+              <li class="m" data-m="1">parcelhold-notice-4907.top</li>
+              <li>heraklion-bike-hire.com</li>
+              <li>tinyloom-knits.shop</li>
+              <li class="m" data-m="2">parcelhold-notice-5013.top</li>
+              <li>quietharbour-books.io</li>
+              <li>olive-grove-rentals.gr</li>
+              <li>lumen-paperworks.org</li>
+              <li class="m" data-m="3">parcelhold-notice-5120.top</li>
+              <li>saltpan-surf-school.com</li>
+              <li>brightpath-tutors.org</li>
+              <li class="m" data-m="4">parcelhold-notice-5238.top</li>
+              <li>northwind-ceramics.eu</li>
+            </ul>
+          </div>
+          <div class="feed-stage feed-cluster">
+            <p class="feed-head"><strong>Suspicious Cluster</strong></p>
+            <ol class="cluster" aria-label="Domains grouped into one cluster">
+              <li data-m="0">parcelhold-notice-<span class="slot">4821</span><span class="tld">.top</span></li>
+              <li data-m="1">parcelhold-notice-<span class="slot">4907</span><span class="tld">.top</span></li>
+              <li data-m="2">parcelhold-notice-<span class="slot">5013</span><span class="tld">.top</span></li>
+              <li data-m="3">parcelhold-notice-<span class="slot">5120</span><span class="tld">.top</span></li>
+              <li data-m="4">parcelhold-notice-<span class="slot">5238</span><span class="tld">.top</span></li>
+            </ol>
+            <p class="pattern"><span class="pattern-label">Shared template</span><span class="template">parcelhold-notice-<span class="slot">[0-9]{4}</span><span class="tld">.top</span></span></p>
+          </div>
         </div>
+        <figcaption>Grouping new domains by similarity exposes bulk registrations and the template behind them. The domains are illustrative.</figcaption>
+      </figure>
+      <script>
+        (function () {
+          var feed = document.getElementById('feed');
+          if (!feed || !feed.animate || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          feed.classList.add('armed');
+          var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+          ready.then(function () {
+            var rows = feed.querySelectorAll('.cluster li');
+            var start = 700, gap = 380, flight = 650;
+            rows.forEach(function (row, i) {
+              setTimeout(function () {
+                var src = feed.querySelector('.stream .m[data-m="' + row.dataset.m + '"]');
+                var a = src.getBoundingClientRect(), b = row.getBoundingClientRect();
+                var k = parseFloat(getComputedStyle(src).fontSize) / parseFloat(getComputedStyle(row).fontSize);
+                var dx = a.left + parseFloat(getComputedStyle(src).paddingLeft) - b.left;
+                var dy = a.top - b.top;
+                src.classList.add('taken');
+                row.classList.add('landed');
+                row.animate(
+                  [{ transform: 'translate(' + dx + 'px,' + dy + 'px) scale(' + k + ')' }, { transform: 'none' }],
+                  { duration: flight, easing: 'cubic-bezier(.2,.75,.2,1)' }
+                );
+              }, start + i * gap);
+            });
+            setTimeout(function () { feed.classList.add('resolved'); },
+              start + (rows.length - 1) * gap + flight + 150);
+          });
+        })();
+      </script>
     </header>
 
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="100">
-                    <img src="images/AlexandrosFourtounis.jpg" alt="Alexandros Fourtounis" class="img-fluid rounded-circle profile-image">
-                </div>
-                <div class="col-md-8" data-aos="fade-left" data-aos-delay="200">
-                    <p class="lead">Alexandros Fourtounis is a dedicated computer science student renowned for his unwavering passion for exploring cutting-edge technologies and tackling intricate challenges.</p>
-                    <p>Possessing a robust proficiency in algorithms, data structures, programming languages, and mathematics, Alexandros is poised to apply his expertise to real-world endeavors and contribute to pioneering solutions. Currently immersed in the pursuit of his computer science degree, he remains steadfast in his commitment to perpetual learning and professional advancement within the dynamic realm of computer science.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="layout">
+      <nav class="rail" aria-label="Sections">
+        <ul>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publication">Publication</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#positions">Research positions</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#ctf">Capture the flag</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Projects</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card project-card h-100">
-                        <img src="images/petcare_logo.jpg" class="card-img-top" alt="Pet Care">
-                        <div class="card-body">
-                            <h5 class="card-title">Pet Care</h5>
-                            <p class="card-text">Fullstack web-application for pet care services.</p>
-                            <a href="https://alexandrosfourtounis.github.io/PetCare/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card project-card h-100">
-                        <img src="images/evol_logo.png" class="card-img-top" alt="EVOL">
-                        <div class="card-body">
-                            <h5 class="card-title">EVOL</h5>
-                            <p class="card-text">A comprehensive vehicle renting database system.</p>
-                            <a href="https://alexandrosfourtounis.github.io/EVOL/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card project-card h-100">
-                        <img src="images/ransomwarden_logo.jpg" class="card-img-top" alt="RansomWarden">
-                        <div class="card-body">
-                            <h5 class="card-title">RansomWarden</h5>
-                            <p class="card-text">A cutting-edge ransomware protection software suite.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <main>
+        <section id="research" aria-labelledby="research-h">
+          <h2 id="research-h">Research</h2>
+          <div class="intro">
+            <p>I work in the Distributed Computing Systems &amp; Cybersecurity Lab (DiSCS) at the Institute of Computer Science, FORTH, in Heraklion. My interests are DNS security, web security, privacy and Internet measurements.</p>
+            <p>I'm currently working on the following studies:</p>
+          </div>
 
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Contact Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <p class="lead mb-4">Feel free to reach out to me through any of the following platforms:</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/alexandros.fourtounis.5" target="_blank" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/alexandros-fourtounis-b89959199/" target="_blank" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/fourtounis_alex" target="_blank" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:alexandrosfourtounis@gmail.com" data-aos="zoom-in" data-aos-delay="500"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+          <ul class="entries">
+            <li class="entry">
+              <h3>Compression-based detection of suspicious bulk domain registrations</h3>
+              <p>A detection method that identifies compressible clusters of lexically similar newly registered domains.</p>
+            </li>
+            <li class="entry">
+              <h3>Tracking pixels at web scale</h3>
+              <p>A collaborative measurement study across the Tranco top one million sites and Common Crawl archives. We study how widely two third-party tracking pixels are adopted, how sites configure them and how much personal data they collect automatically.</p>
+            </li>
+            <li class="entry">
+              <h3>Malicious advertising on social media</h3>
+              <p>A collaborative study of a major social media platform's advertising ecosystem. We examine malicious ads, the advertisers behind them and potential gaps in platform policy.</p>
+            </li>
+          </ul>
+        </section>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2024 Alexandros Fourtounis. All rights reserved.</p>
-        </div>
+        <section id="publication" aria-labelledby="publication-h">
+          <h2 id="publication-h">Publication</h2>
+          <div class="citation">
+            <p class="citation-title">COBRA: A Content-Agnostic Framework for Zero-Day Detection of Suspicious Domains</p>
+            <p class="citation-meta"><strong>Fourtounis, A.</strong>, Papadogiannakis, E., Papadopoulos, P., Kourtellis, N. and Markatos, E. (2026). In <em>Proceedings of the 23rd International Conference on Security and Cryptography (SECRYPT)</em>, Volume 1.</p>
+            <ul class="citation-links">
+              <li><a href="https://doi.org/10.5220/0015000800004103">DOI <span class="code">10.5220/0015000800004103</span></a></li>
+            </ul>
+          </div>
+          <p>COBRA flags suspicious domains without looking at their content. It clusters newly registered domains by lexical and structural similarity and identifies suspicious bulk domain registrations. Over three months it processed 1.5 million domains across six top-level domains and flagged more than 47,000 as suspicious. It reached 98.5% precision in evaluation and reduced detection delay by up to seven days.</p>
+        </section>
+
+        <section id="education" aria-labelledby="education-h">
+          <h2 id="education-h">Education</h2>
+          <ol class="timeline">
+            <li class="entry now">
+              <span class="date">Sep 2025 to present</span>
+              <h3>M.Sc. in Computer Science and Engineering</h3>
+              <p class="entry-sub">University of Crete, Heraklion</p>
+              <p>Thesis: <em>Detecting Malicious Bulk Domain Registrations through Small Generative Patterns</em>. GPA: 9.5/10. Supervised by Prof. Evangelos Markatos. Expected graduation July 2027.</p>
+            </li>
+            <li class="entry">
+              <span class="date">Sep 2021 to Jul 2025</span>
+              <h3>B.Sc. in Computer Science</h3>
+              <p class="entry-sub">University of Crete, Heraklion</p>
+              <p>My thesis, <em>Exploration of Malicious Websites in Recent Top-Level Domains</em>, was graded 10/10. GPA 7.76/10. Supervised by Prof. Evangelos Markatos.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="positions" aria-labelledby="positions-h">
+          <h2 id="positions-h">Research positions</h2>
+          <ol class="timeline">
+            <li class="entry now">
+              <span class="date">Jul 2026 to present</span>
+              <h3>R&amp;D Computer Scientist</h3>
+              <p class="entry-sub">DiSCS, ICS-FORTH, Heraklion</p>
+              <p>Ongoing work on bulk-registration detection, tracking-pixel measurement and malicious advertising.</p>
+            </li>
+            <li class="entry">
+              <span class="date">Feb 2026 to Jun 2026</span>
+              <h3>Graduate Research Fellow</h3>
+              <p class="entry-sub">DiSCS, ICS-FORTH, Heraklion</p>
+              <p>Continued the COBRA research, then submitted and presented it at SECRYPT 2026. Built browser-automation and concurrent crawling pipelines to collect web data for research studies.</p>
+            </li>
+            <li class="entry">
+              <span class="date">Jul 2024 to Sep 2025</span>
+              <h3>Undergraduate Research Fellow</h3>
+              <p class="entry-sub">DiSCS, ICS-FORTH, Heraklion</p>
+              <p>Developed COBRA, an offline zero-day framework that clusters newly registered domains to detect suspicious and malicious bulk registrations.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="teaching" aria-labelledby="teaching-h">
+          <h2 id="teaching-h">Teaching</h2>
+          <div class="entry">
+            <div class="entry-head">
+              <h3>Teaching Assistant</h3>
+              <span class="date">Since Sep 2024</span>
+            </div>
+            <p class="entry-sub">Department of Computer Science, University of Crete</p>
+            <ul>
+              <li>Operating Systems, Fall 2025 and Fall 2026</li>
+              <li>Introduction to Secure Systems, Spring 2026</li>
+              <li>Digital Circuits Laboratory, Spring 2025</li>
+              <li>Calculus I, Fall 2024</li>
+            </ul>
+            <p>I give supplemental lectures and tutoring sessions, grade assignments and give students technical feedback.</p>
+          </div>
+        </section>
+
+        <section id="ctf" aria-labelledby="ctf-h">
+          <h2 id="ctf-h">Capture the flag</h2>
+          <div class="entry">
+            <div class="entry-head">
+              <h3>Coach and member, 0xdeada1u5</h3>
+              <span class="date">Since Sep 2024</span>
+            </div>
+            <p class="entry-sub">University of Crete cybersecurity team</p>
+            <p>I compete with the team in capture-the-flag competitions and mentor students through hands-on challenges, talks and outreach.</p>
+            <ul>
+              <li>1st of 664 teams worldwide, FortID CTF 2026</li>
+              <li>2nd place, Hellenic University Hack</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-h">
+          <h2 id="projects-h">Selected projects</h2>
+          <ul class="entries">
+            <li class="entry">
+              <div class="entry-head"><h3>PIIxel Leaks reproduction and extension</h3><span class="date">May 2026 to Jul 2026</span></div>
+              <p class="entry-sub">Graduate team project. <a href="https://github.com/AlexandrosFourtounis/PIIxelLeaks_ExtensionReproductionProject">Code on GitHub</a></p>
+              <p>Measured Meta Pixel adoption and personal-data collection across two Tranco snapshots and a set of illicit domains. We extended the original crawler to find hidden pixel deployments. Malicious domains that share pixel IDs were clustered, and their hosting and registrars were checked for signs of coordinated infrastructure.</p>
+            </li>
+            <li class="entry">
+              <div class="entry-head"><h3>Research paper reproductions</h3><span class="date">2025 to 2026</span></div>
+              <p class="entry-sub">Graduate projects. <a href="https://github.com/AlexandrosFourtounis/ReplicationProjects">Reports on GitHub</a></p>
+              <p>Reproduced experiments on cloud performance tuning on my own and worked with others on reproductions of hash-table performance studies. Experiments ran on AWS and Azure, with a technical report for each.</p>
+            </li>
+            <li class="entry">
+              <div class="entry-head"><h3>Adversarial training via min-max optimization</h3><span class="date">Jan 2026 to Feb 2026</span></div>
+              <p class="entry-sub">Graduate team project. <a href="https://github.com/AlexandrosFourtounis/AdversarialTrainingProject">Code on GitHub</a></p>
+              <p>PGD-based adversarial training on CIFAR-10. The team's models reached 2.4 times the baseline accuracy under PGD attack and gained 7.37 points of clean accuracy. We studied the effect of pre-training, learning rates and the ratio of adversarial to clean samples. We presented the results at a poster session.</p>
+            </li>
+            <li class="entry">
+              <div class="entry-head"><h3>Cryptographic vulnerability analysis framework</h3><span class="date">Nov 2024 to Dec 2024</span></div>
+              <p class="entry-sub">Team project. <a href="https://github.com/AlexandrosFourtounis/Crypto-Agility-Framework-for-PQC">Code on GitHub</a></p>
+              <p>A prototype that finds insecure cryptography in Python, Java and C code. It identifies weak primitives, unsafe configurations and hardcoded keys. It tracks findings in Flask and SQLite, suggests or applies fixes, re-scans and reports on remediation to help plan a move to post-quantum cryptography.</p>
+            </li>
+            <li class="entry">
+              <div class="entry-head"><h3>wGrep</h3><span class="date">Jul 2024 to Aug 2024</span></div>
+              <p>A Python toolkit that scans Common Crawl WARC records with configurable regular expressions. It splits scans across subprocesses and aggregates statistics by URL, domain and match.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-h">
+          <h2 id="contact-h">Contact</h2>
+          <ul class="contact-list">
+            <li><span class="label">Email</span> alexandrosfourtounis [at] gmail [dot] com</li>
+            <li><span class="label">GitHub</span> <a href="https://github.com/AlexandrosFourtounis">AlexandrosFourtounis</a></li>
+            <li><span class="label">LinkedIn</span> <a href="https://linkedin.com/in/alexandros-fourtounis">alexandros-fourtounis</a></li>
+            <li><span class="label">CV</span> <a href="Alexandros_Fourtounis_CV.pdf">Download the PDF</a></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <span>Updated November 2026</span>
+      <a href="archive/">Earlier projects (archive)</a>
     </footer>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
+  <script>
+    (function () {
+      if (!('IntersectionObserver' in window)) return;
+      var links = document.querySelectorAll('.rail a');
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          links.forEach(function (a) { a.removeAttribute('aria-current'); });
+          var link = byId[e.target.id];
+          if (link) link.setAttribute('aria-current', 'true');
         });
-    </script>
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      document.querySelectorAll('main section').forEach(function (s) { observer.observe(s); });
+    })();
+  </script>
 </body>
 </html>
