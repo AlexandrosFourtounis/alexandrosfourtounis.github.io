@@ -428,6 +428,10 @@ main h3 {
 
 .citation + p { margin-top: 1.5rem; }
 
+.pub + .pub { margin-top: 2.75rem; }
+
+.citation-meta + .citation-meta { margin-top: 0.4rem; }
+
 /* Timeline: the only place order matters */
 .timeline {
   list-style: none;
